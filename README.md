@@ -203,4 +203,24 @@ If you implement additional features or handle edge cases beyond the basic requi
 
 **Note:** Bonus implementations should enhance the user experience without breaking existing functionality or tests.
 
-**Good luck!** 🚀
+## Additional Implementations
+
+### Edge Cases Handled
+- `localStorage.clear()` in `setupTests.js` → prevents test state leakage
+- Safe JSON parsing with `try/catch` in `CartContext`
+- Stock capping: cannot add more than available stock
+- Decrement to 0 removes item from cart
+- Price in cents → avoids floating-point errors
+
+### Code Quality & UX
+- All console logs wrapped in `*** ... ***` for clarity
+- Logical blocks commented with `// ****`
+- Immutable cart updates using `prev` state
+- `useMemo` in `Catalog.jsx` for efficient search + sort
+
+### Testing
+- All 9 public tests pass
+- Tests are isolated and order-independent
+- No changes to `data-testid`, `products.json`, or component structure
+
+**All requirements met. Ready for review!**
